@@ -44,7 +44,7 @@ module.exports = {
       {
         test: /\.json$/,
         loader: 'json',
-        exclude: /node_modules/
+        include: path.join(__dirname, 'src')
       },
       {
         test: /\.css$/,
@@ -56,19 +56,23 @@ module.exports = {
       },
       {
         test: /\.png$/,
-        loader: 'url?.[ext]&mimetype=image/png'
+        loader: 'url?.[ext]&mimetype=image/png',
+        include: path.join(__dirname, 'src/images')
       },
       {
         test: /\.ico$/,
-        loader: 'url?mimetype=image/x-icon'
+        loader: 'url?mimetype=image/x-icon',
+        include: path.join(__dirname, 'src')
       },
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "url?limit=10000&minetype=application/font-woff"
+        loader: "url?limit=10000&minetype=application/font-woff",
+        include: path.join(__dirname, 'src/fonts')
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "file"
+        loader: "file",
+        include: path.join(__dirname, 'src/fonts')
       }
     ],
     postcss: function () {
