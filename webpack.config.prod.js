@@ -16,7 +16,6 @@ module.exports = {
     filename: '/scripts/bundle.[hash].js'
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new webpack.DefinePlugin({
       "process.env": {
