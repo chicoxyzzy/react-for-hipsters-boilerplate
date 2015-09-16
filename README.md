@@ -22,10 +22,10 @@ After that you should fix `package.json` file by changing `name`, `author` and `
 Run `npm start` and enjoy all modern stuff at [http://localhost:3000](http://localhost:3000)
 
 ### Test build with sourcemaps and all that shit
-`npm run build:test`
+`npm run build:test` builds all the things to `/public`
 
 ### Production build
-`npm run build:prod`
+`npm run build:prod` builds all the things to `/public` too
 
 ### Version bumping
 Run `npm version patch` or `npm version minor` or `npm version major` according to SemVer.
