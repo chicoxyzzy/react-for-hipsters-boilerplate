@@ -31,8 +31,18 @@ module.exports = {
       template: 'src/index.html',
       inject: true,
       favicon: 'src/favicon.ico',
-      title: 'App ' + version,
-      minify: true
+      title: 'App',
+      minify: {
+        removeComments: true,
+        collapseWhitespace: true,
+        collapseBooleanAttributes: true,
+        removeAttributeQuotes: true,
+        removeRedundantAttributes: true,
+        removeEmptyAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        removeOptionalTags: true
+      }
     })
   ],
   module: {
