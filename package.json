@@ -1,6 +1,6 @@
 {
   "name": "react-for-hipsters-boilerplate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "All you need for React development",
   "scripts": {
     "start": "node server.js",
