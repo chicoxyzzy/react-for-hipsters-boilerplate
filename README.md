@@ -3,8 +3,7 @@ Fresh boilerplate with brand new hot reloading confing and other hipster stuff
 
 ## Includes:
 - React 0.14.0-rc1
-- Redux 3.0.0
-- css-modules
+- Redux 3.0.2
 - `Promise` and `Fetch` polyfills
 - AirBnB ESLint Styleguide
 - [brand new hot reloading](https://github.com/gaearon/react-transform-boilerplate) for Webpack

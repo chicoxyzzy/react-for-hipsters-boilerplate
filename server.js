@@ -6,16 +6,20 @@ var config = require('./webpack.config.dev');
 var app = express();
 var compiler = webpack(config);
 
-app.use(require('webpack-dev-middleware')(compiler, {
+var devMiddleware = require('webpack-dev-middleware')(compiler, {
   noInfo: true,
   publicPath: config.output.publicPath,
-  stats: { colors: true }
-}));
+  stats: { colors: true },
+});
 
-app.use(require('webpack-hot-middleware')(compiler));
+var hotMiddleware = require('webpack-hot-middleware')(compiler);
+
+app.use(devMiddleware);
+
+app.use(hotMiddleware);
 
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
+  res.sendFile(path.join(__dirname, 'src/index_dev.html'));
 });
 
 app.listen(3000, 'localhost', function(err) {

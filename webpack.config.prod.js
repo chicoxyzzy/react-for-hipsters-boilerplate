@@ -3,46 +3,38 @@
 var version = require('./package.json').version;
 var path = require('path');
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var autoprefixer = require('autoprefixer');
 
 module.exports = {
   entry: [
-    './src/index'
+    './src/scripts/index'
   ],
   output: {
     path: path.join(__dirname, 'public'),
-    filename: '/scripts/bundle.[hash].js'
+    filename: '/scripts/bundle.[chunkhash].js'
   },
   plugins: [
-    new webpack.NoErrorsPlugin(),
-    new webpack.DefinePlugin({
-      "process.env": {
-        NODE_ENV: JSON.stringify("production")
+    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      output: {
+        comments: false
       },
+      compressor: {
+        warnings: false
+      }
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('production'),
       APP_VERSION: JSON.stringify(version)
     }),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin({ output: {comments: false} }),
-    new ExtractTextPlugin('/styles/styles.[hash].css', { allChunks: true }),
+    new ExtractTextPlugin('/styles/styles.[contenthash].css', { allChunks: true }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'src/index.html',
-      inject: true,
-      favicon: 'src/favicon.ico',
-      title: 'App',
-      minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        collapseBooleanAttributes: true,
-        removeAttributeQuotes: true,
-        removeRedundantAttributes: true,
-        removeEmptyAttributes: true,
-        removeScriptTypeAttributes: true,
-        removeStyleLinkTypeAttributes: true,
-        removeOptionalTags: true
-      }
+      inject: true
     })
   ],
   module: {
@@ -50,7 +42,12 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
-        include: path.join(__dirname, 'src')
+        include: path.join(__dirname, 'src/scripts'),
+        query: {
+          stage: 2,
+          optional: ['es7.classProperties'],
+          loose: 'all'
+        }
       },
       {
         test: /\.json$/,
@@ -59,9 +56,9 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('css?minimize&modules!postcss'),
+        loader: ExtractTextPlugin.extract('css?minimize!postcss'),
         include: [
-          path.join(__dirname, 'src'),
+          path.join(__dirname, 'src/styles'),
           path.join(__dirname, 'node_modules/normalize.css')
         ]
       },
@@ -71,18 +68,13 @@ module.exports = {
         include: path.join(__dirname, 'src/images')
       },
       {
-        test: /\.ico$/,
-        loader: 'url?name=[name].[ext]&mimetype=image/x-icon',
-        include: path.join(__dirname, 'src')
-      },
-      {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "url?name=/fonts/[name].[ext]&limit=10000&minetype=application/font-woff",
+        loader: 'url?name=/fonts/[name].[ext]&limit=10000&mimetype=application/font-woff',
         include: path.join(__dirname, 'src/fonts')
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        loader: "file?name=/fonts/[name].[ext]",
+        loader: 'file?name=/fonts/[name].[ext]',
         include: path.join(__dirname, 'src/fonts')
       }
     ],
