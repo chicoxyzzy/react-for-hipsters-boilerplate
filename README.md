@@ -1,5 +1,5 @@
 # react-for-hipsters-boilerplate
-Fresh boilerplate with brand new hot reloading confing and other hipster stuff
+Fresh boilerplate with brand new hot reloading config and other hipster stuff. IE10+
 
 ## Includes:
 - React 0.14.0-rc1
