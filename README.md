@@ -8,7 +8,7 @@ Fresh boilerplate with brand new hot reloading confing and other hipster stuff
 - AirBnB ESLint Styleguide
 - [brand new hot reloading](https://github.com/gaearon/react-transform-boilerplate) for Webpack
 - PostCSS
-- [debug-dude](https://github.com/ggarek/debug-dude) by @ggarek (you should enable it by setting `debug` field to `*` in local storage)
+- [debug-dude](https://github.com/ggarek/debug-dude) by [@ggarek](https://github.com/ggarek) (you should enable it by setting `debug` field to `*` in local storage)
 
 ## What you need to do
 First of all you need to clone repo and remove it from Git
