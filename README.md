@@ -2,7 +2,7 @@
 Fresh boilerplate with brand new hot reloading config and other hipster stuff. IE10+
 
 ## Includes:
-- React 0.14.0-rc1
+- React 0.14.0
 - Redux 3.0.2
 - `Promise` and `Fetch` polyfills
 - AirBnB ESLint Styleguide
