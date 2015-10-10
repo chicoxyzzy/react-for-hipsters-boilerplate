@@ -7,7 +7,7 @@
     "build:test": "webpack --config webpack.config.test.js",
     "build:prod": "webpack --config webpack.config.prod.js",
     "build": "npm run build:prod",
-    "lint": "eslint src/",
+    "lint": "eslint src/scripts/",
     "preversion": "npm run lint && npm test",
     "postversion": "git push origin HEAD && git push --tags",
     "test": "exit 0"
