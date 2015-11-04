@@ -43,7 +43,7 @@
     "babel-eslint": "^4.1.4",
     "babel-loader": "^5.3.3",
     "babel-plugin-react-transform": "^1.0.3",
-    "css-loader": "^0.21.0",
+    "css-loader": "^0.22.0",
     "eslint": "^1.8.0",
     "eslint-config-airbnb": "^0.1.0",
     "eslint-plugin-react": "^3.6.1",
