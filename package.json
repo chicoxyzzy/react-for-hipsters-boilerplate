@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^6.1.0",
-    "babel-core": "^5.8.34",
+    "babel-core": "^6.1.19",
     "babel-eslint": "^4.1.5",
     "babel-loader": "^5.3.3",
     "babel-plugin-react-transform": "^1.0.3",
