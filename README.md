@@ -1,9 +1,9 @@
 # react-for-hipsters-boilerplate
 Fresh boilerplate with brand new hot reloading config and other hipster stuff. IE10+
 
-## Includes:
-- React 0.14.0
-- Redux 3.0.2
+## Includes always last versions of:
+- React
+- Redux
 - `Promise` and `Fetch` polyfills
 - AirBnB ESLint Styleguide
 - [brand new hot reloading](https://github.com/gaearon/react-transform-boilerplate) for Webpack
