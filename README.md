@@ -4,6 +4,7 @@ Fresh boilerplate with brand new hot reloading config and other hipster stuff. I
 ## Includes always last versions of:
 - React
 - Redux
+- Director
 - `Promise` and `Fetch` polyfills
 - AirBnB ESLint Styleguide
 - [brand new hot reloading](https://github.com/gaearon/react-transform-boilerplate) for Webpack
