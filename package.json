@@ -3,7 +3,6 @@
   "version": "1.0.4",
   "description": "All you need for React development",
   "scripts": {
-    "start": "node server.js",
     "build:test": "webpack --config webpack.config.test.js",
     "build:prod": "webpack --config webpack.config.prod.js",
     "build": "npm run build:prod",
