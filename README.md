@@ -15,11 +15,14 @@ Fresh boilerplate with brand new hot reloading config and other hipster stuff. I
 First of all you need to clone repo and remove it from Git
 ```
 git clone git@github.com:chicoxyzzy/react-for-hipsters-boilerplate.git
+cd react-for-hipsters-boilerplate
 rm -rf .git
 ```
 After that you should fix `package.json` file by changing `name`, `author` and `version` fields
 
 ### Start dev environment
+Run `npm install` to setup the initial environment and download dependencies 
+
 Run `npm start` and enjoy all modern stuff at [http://localhost:3000](http://localhost:3000)
 
 ### Test build with sourcemaps and all that shit
