@@ -2,6 +2,8 @@
 require('es6-promise').polyfill();
 require('whatwg-fetch');
 
+safasd
+
 // normalize.css
 require('normalize.css');
 

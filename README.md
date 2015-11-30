@@ -25,6 +25,16 @@ Run `npm install` to setup the initial environment and download dependencies
 
 Run `npm start` and enjoy all modern stuff at [http://localhost:3000](http://localhost:3000)
 
+### To check your code for lint and other types of errors 
+Code linting is a type of static analysis that is frequently used to find problematic patterns or code that doesn't adhere to certain style guidelines.  
+
+`npm run lint` checks the sources in ./src/scripts/   
+
+if you do not have eslint installed you can install it with 
+
+`npm install eslint -g`
+
+
 ### Test build with sourcemaps and all that shit
 `npm run build:test` builds all the things to `/public`
 
