@@ -33,7 +33,7 @@
     "react-dom": "^0.14.6",
     "react-redux": "^4.0.6",
     "redux": "^3.0.2",
-    "socket.io-client": "^1.4.2",
+    "socket.io-client": "^1.4.4",
     "whatwg-fetch": "^0.10.1"
   },
   "devDependencies": {
