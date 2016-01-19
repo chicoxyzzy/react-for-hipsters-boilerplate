@@ -34,7 +34,7 @@
     "react-redux": "^4.0.6",
     "redux": "^3.0.2",
     "socket.io-client": "^1.4.4",
-    "whatwg-fetch": "^0.10.1"
+    "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.1",
