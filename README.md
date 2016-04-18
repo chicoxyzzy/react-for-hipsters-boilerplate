@@ -1,3 +1,5 @@
+# No longer maintained since April 19 2016
+
 # react-for-hipsters-boilerplate
 Fresh boilerplate with brand new hot reloading config and other hipster stuff. IE10+
 
